@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Workshop</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pens.each do |pen| %>
+      <tr>
+        <td><%= link_to 'Show', workshop_path(pen) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
