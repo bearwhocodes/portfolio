@@ -3,14 +3,13 @@ class Admin::PensController < ApplicationController
   before_action :set_pen, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/pens
-  # GET /admin/pens.json
   def index
     @pens = Pen.all
   end
 
   # GET /admin/pens/1
-  # GET /admin/pens/1.json
   def show
+    redirect_to edit_admin_pen_path(@pen)
   end
 
   # GET /admin/pens/new
@@ -23,43 +22,29 @@ class Admin::PensController < ApplicationController
   end
 
   # POST /admin/pens
-  # POST /admin/pens.json
   def create
     @pen = Pen.new(pen_params)
 
-    respond_to do |format|
-      if @pen.save
-        format.html { redirect_to admin_pen_path(@pen), notice: 'Pen was successfully created.' }
-        format.json { render :show, status: :created, location: @pen }
-      else
-        format.html { render :new }
-        format.json { render json: @pen.errors, status: :unprocessable_entity }
-      end
+    if @pen.save
+      redirect_to admin_pens_path, notice: 'Pen was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /admin/pens/1
-  # PATCH/PUT /admin/pens/1.json
   def update
-    respond_to do |format|
-      if @pen.update(pen_params)
-        format.html { redirect_to admin_pen_path(@pen), notice: 'Pen was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pen }
-      else
-        format.html { render :edit }
-        format.json { render json: @pen.errors, status: :unprocessable_entity }
-      end
+    if @pen.update(pen_params)
+      redirect_to admin_pens_path, notice: 'Pen was successfully updated.'
+    else
+      render :edit
     end
   end
 
   # DELETE /admin/pens/1
-  # DELETE /admin/pens/1.json
   def destroy
     @pen.destroy
-    respond_to do |format|
-      format.html { redirect_to pens_url, notice: 'Pen was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to admin_pens_url, notice: 'Pen was successfully destroyed.'
   end
 
   private
@@ -70,6 +55,6 @@ class Admin::PensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pen_params
-      params.fetch(:pen, {})
+      params.require(:pen).permit(:name, :summary, :codepen_url, :archived, :image)
     end
 end

@@ -1,17 +1,13 @@
-<%= form_with(model: pen, local: true) do |form| %>
-  <% if pen.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(pen.errors.count, "error") %> prohibited this pen from being saved:</h2>
+<%= simple_form_for(pen, url: path) do |f| %>
+  <%= render 'shared/errors', obj: pen %>
 
-      <ul>
-      <% pen.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.input :name %>
+  <%= f.input :summary %>
+  <%= f.input :codepen_url %>
+  <%= f.input :image %>
+  <%= f.input :archived %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
   </div>
 <% end %>

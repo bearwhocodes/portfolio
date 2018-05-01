@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# jQuery for wysiwyg editor
+gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Tags on articles
@@ -32,6 +34,10 @@ gem 'readingtime'
 gem 'carrierwave'
 # Figaro for secure passwords
 gem 'figaro'
+# Simple form for admin pages
+gem 'simple_form'
+# Bootstrap for admin pages
+gem 'bootstrap'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

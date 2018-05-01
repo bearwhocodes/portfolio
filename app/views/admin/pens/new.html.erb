@@ -1,5 +1,5 @@
-<h1>New Admin Pen</h1>
+<h1>New Pen</h1>
 
-<%= render 'form', pen: @pen %>
+<%= render 'form', pen: @pen, path: admin_pens_path(@pen) %>
 
 <%= link_to 'Back', admin_pens_path %>

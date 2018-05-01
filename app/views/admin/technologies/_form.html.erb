@@ -1,17 +1,10 @@
-<%= form_with(model: technology, local: true) do |form| %>
-  <% if technology.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(technology.errors.count, "error") %> prohibited this technology from being saved:</h2>
+<%= simple_form_for(technology, url: path) do |f| %>
+  <%= render 'shared/errors', obj: technology %>
 
-      <ul>
-      <% technology.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.input :name %>
+  <%= f.input :icon %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
   </div>
 <% end %>
