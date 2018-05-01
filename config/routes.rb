@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :pens
     resources :articles
+    resources :technologies
     root 'console#home'
   end
 
