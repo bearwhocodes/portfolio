@@ -1,6 +1,8 @@
 class Admin::TechnologiesController < ApplicationController
   before_action :set_technology, only: [:show, :edit, :update, :destroy]
 
+  layout "admin"
+
   # GET /admin/technologies
   def index
     @technologies = Technology.all

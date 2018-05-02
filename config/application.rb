@@ -27,5 +27,10 @@ module Portfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Devise layout
+    config.to_prepare do
+      Devise::SessionsController.layout "admin"
+    end
   end
 end

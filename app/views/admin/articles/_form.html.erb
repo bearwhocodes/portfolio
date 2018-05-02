@@ -3,12 +3,16 @@
 
   <%= f.input :title %>
   <%= f.input :summary %>
-  <%= f.input :published_at %>
+  <div class="form-group">
+    <%= f.label :published_at %>
+    <%= f.datetime_local_field :published_at, class: 'form-control' %>
+  </div>
   <%= f.input :image %>
   <%= f.input :archived %>
   <%= f.text_area :content, class: 'editor' %>
 
   <div class="actions">
-    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Back', admin_articles_path, class: "btn btn-secondary" %>
+    <%= f.submit 'Save', class: 'btn btn-primary float-right' %>
   </div>
 <% end %>

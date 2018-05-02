@@ -1,22 +1,26 @@
-<h1>Technologies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @technologies.each do |technology| %>
-      <tr>
-        <td><%= technology.name %></td>
-        <td><%= link_to 'Edit', edit_admin_technology_path(technology) %></td>
-        <td><%= link_to 'Destroy', admin_technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'New Technology', new_admin_technology_path %>
+<div class="row">
+  <div class="col-sm">
+    <table class="table table-striped">
+      <thead>
+        <tr class="bg-primary">
+          <th width="80%" class="text-white">Name</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @technologies.each do |technology| %>
+          <tr>
+            <td><%= technology.name %></td>
+            <td><%= link_to 'Edit', edit_admin_technology_path(technology), class: "btn btn-primary" %></td>
+            <td><%= link_to 'Destroy', admin_technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <%= link_to 'New Technology', new_admin_technology_path, class: "btn btn-primary" %>
+  </div>
+</div>
