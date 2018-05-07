@@ -1,3 +1,81 @@
-// Place all the styles related to the admin::technologies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Workshop Index
+
+.wrapper--workshop {
+  height: auto;
+  min-height: calc(100vh - 8rem);
+}
+
+.navigation__block--disabled.navigation__block--workshop {
+  right: auto;
+  left: 0;
+  top: 50vh;
+  margin-top: -4rem;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.wrapper--workshop .content {
+  padding: 0;
+  width: 100%;
+}
+
+.workshop {
+  padding: 0 20%;
+}
+
+.pens {
+  border-left: 1px solid #e7edf1;
+  padding: 4rem;
+}
+
+.pen {
+  position: relative;
+  margin-top: 6rem;
+  padding-right: 12rem;
+}
+
+.pen:first-child {
+  margin-top: 0;
+}
+
+.pen:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pen__count {
+  position: absolute;
+  display: block;
+  left: -4rem;
+  transform: translate3d(-50%, -1.2rem, 0);
+  padding: 1.5rem 0;
+  background: #ffffff;
+  font-family: "acumin-pro-condensed",sans-serif;
+  color: #778899;
+}
+
+.pen__name {
+  margin: 0 0 0.8rem;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.pen__tags {
+  font-size: 1.4rem;
+  color: #778899;
+  font-family: "acumin-pro-condensed",sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem;
+}
+
+.pen__description {
+  font-size: 1.4rem;
+  margin: 0 0 0.8rem;
+}
+
+.pen__link {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}

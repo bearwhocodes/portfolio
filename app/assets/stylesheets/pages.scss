@@ -1,3 +1,25 @@
-// Place all the styles related to the admin::technologies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Home
+
+.homepage {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.homepage__text {
+  padding-left: 4rem;
+  max-width: 40rem;
+}
+
+.homepage__heading, .homepage__subtext {
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+.homepage__subtext {
+  color: #778899;
+}
