@@ -1,19 +1,129 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to 'Show', article %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="wrapper wrapper--articles">
+  <nav class="navigation">
+    <div class="navigation__block navigation__block--articles navigation__block--disabled" role="navigation">
+      <a class="navigation__link" href="#" role="button">ARTICLES</a>
+    </div>
+  </nav>
+  <main class="content">
+    <div class="articles">
+      <article class="article">
+        <span class="article__count">01/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+        <div class="scroll">
+          <span class="scroll__mouse">
+          </span>
+        </div>
+      </article>
+      <article class="article">
+        <span class="article__count">02/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+      </article>
+      <article class="article">
+        <span class="article__count">03/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+      </article>
+      <article class="article">
+        <span class="article__count">04/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+      </article>
+      <article class="article">
+        <span class="article__count">05/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+      </article>
+      <article class="article">
+        <span class="article__count">06/06</span>
+        <img class="article__image" src="http://via.placeholder.com/320x320" alt="Article Image" />
+        <div class="article__information">
+          <h3 class="article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <div class="article__meta">
+            <div class="article__date">
+              <h5 class="article__meta-title">Date</h5>
+              <p class="article__meta-text">May 2018</p>
+            </div>
+            <div class="article__topics">
+              <h5 class="article__meta-title">Topics</h5>
+              <p class="article__meta-text">one - two - three</p>
+            </div>
+          </div>
+          <p class="article__description">Nulla semper vel diam id tincidunt. Nulla porta eget sem et sodales. Proin faucibus neque metus, ut fermentum risus mattis vitae. Nullam eget maximus nisi, in mollis arcu.</p>
+          <a class="article____link button" href="#"><span class="button__inner">Read More</span></a>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>

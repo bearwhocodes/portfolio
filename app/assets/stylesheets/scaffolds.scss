@@ -1,5 +1,11 @@
 // Layout
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   font-size: 62.5%;
   color: #001f3f;
@@ -15,12 +21,16 @@ html, body {
   height: calc(100vh - 8rem);
   width: calc(100vw - 8rem);
   margin: 4rem;
-  border: 1px solid #e7edf1;
+  border: 0.1rem solid #e7edf1;
   font-size: 1.6rem;
 }
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
 }
 
 .navigation {
@@ -103,8 +113,11 @@ a {
 }
 
 .button {
+  position: relative;
+  display: inline-block;
   border: 1px solid #e7edf1;
   padding: 0;
+  transform: translate3d(0, 0, 0);
 
   &:before,
   &:after {
@@ -124,8 +137,7 @@ a {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 8rem);
-  width: calc(100% - 8rem);
+  height: 100%; 
+  width: 100%;
   padding: 4rem;
-  z-index: 10;
 }

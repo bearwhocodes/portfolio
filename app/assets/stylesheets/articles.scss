@@ -1,3 +1,169 @@
-// Place all the styles related to the admin::technologies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Articles Index
+
+.wrapper--articles {
+  height: auto;
+  min-height: calc(100vh - 8rem);
+}
+
+.navigation__block--disabled.navigation__block--articles {
+  bottom: auto;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.wrapper--articles .content {
+  padding: 0;
+  width: 100%;
+}
+
+.articles {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.article {
+  position: relative;
+  min-height: calc(100vh - 8rem);
+  border-bottom: 0.1rem solid #e7edf1;
+  padding: 4rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.article:last-child {
+  border-bottom: 0;
+}
+
+.article__count {
+  position: absolute;
+  display: block;
+  left: 0;
+  transform: translate3d(-50%, 0, 0);
+  padding: 1.5rem 0;
+  background: #ffffff;
+  font-family: "acumin-pro-condensed",sans-serif;
+  color: #778899;
+}
+
+.article__information {
+  padding-left: 4rem;
+  max-width: 44rem;
+}
+
+.article__title {
+  margin: 0 0 3rem;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.article__meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.4rem;
+}
+
+.article__date {
+  padding-right: 4rem;
+}
+
+.article__meta-title {
+  font-family: "acumin-pro-condensed",sans-serif;
+  color: #778899;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+}
+
+.article__meta-text {
+  font-family: "acumin-pro-condensed",sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 3rem;
+}
+
+.article__description {
+  font-size: 1.4rem;
+  margin: 0 0 3rem;
+  line-height: 1.4;
+}
+
+.article:nth-child(odd) {
+  .article__image {
+    order: 2;
+  }
+  .article__information {
+    order: 1;
+    padding-left: 0;
+    padding-right: 4rem;
+  }
+}
+
+.scroll {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translate3d(-50%, 50%, 0);
+  bottom: 0;
+  padding: 0 3rem;
+  background: #ffffff;
+}
+
+.scroll__mouse {
+  position: relative;
+  display: block;
+  border-radius: 100rem;
+  width: 2rem;
+  height: 3.2rem;
+  border: 0.1rem solid #778899;
+  animation: scroll 2s linear 0s infinite forwards;
+
+  &:before {
+    content: "";
+    display: block;
+    border-radius: 100rem;
+    top: 0.5rem;
+    left: 50%;
+    margin-left: -0.2rem;
+    position: absolute;
+    background: #778899;
+    height: 0.6rem;
+    width: 0.4rem;
+    animation: wheel 2s linear 0s infinite forwards;
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, 0.5rem, 0);
+  }
+  60% {
+    transform: translate3d(0, 0.5rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes wheel {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, 0.3rem, 0);
+    opacity: 0;
+  }
+  60% {
+    transform: translate3d(0, 0.3rem, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0.3rem, 0);
+    opacity: 0;
+  }
+}
